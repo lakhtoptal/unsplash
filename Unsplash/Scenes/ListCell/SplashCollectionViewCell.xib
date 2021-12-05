@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SplashCollectionViewCell" id="nRB-ND-GKJ" customClass="SplashCollectionViewCell" customModule="Unsplash" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="216"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="0JK-Ww-WM3">
+                <rect key="frame" x="0.0" y="0.0" width="300" height="216"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vwM-lv-gYq">
+                        <rect key="frame" x="-1" y="0.0" width="300" height="216"/>
+                    </imageView>
+                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R2H-3H-mf4">
+                        <rect key="frame" x="250" y="10" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="R2H-3H-mf4" secondAttribute="height" multiplier="1:1" id="tjc-th-xz9"/>
+                            <constraint firstAttribute="width" constant="40" id="yzC-oD-o7h"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain">
+                            <backgroundConfiguration key="background" image="unfav"/>
+                        </buttonConfiguration>
+                        <connections>
+                            <action selector="favButtonClicked:" destination="nRB-ND-GKJ" eventType="touchUpInside" id="i3Y-ev-bW9"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="vwM-lv-gYq" secondAttribute="bottom" id="EJF-Vm-o0j"/>
+                    <constraint firstAttribute="trailing" secondItem="R2H-3H-mf4" secondAttribute="trailing" constant="10" id="F2l-3e-wJC"/>
+                    <constraint firstItem="vwM-lv-gYq" firstAttribute="leading" secondItem="0JK-Ww-WM3" secondAttribute="leading" id="ORo-cU-vR5"/>
+                    <constraint firstAttribute="trailing" secondItem="vwM-lv-gYq" secondAttribute="trailing" id="SA6-YD-Uzh"/>
+                    <constraint firstItem="R2H-3H-mf4" firstAttribute="top" secondItem="0JK-Ww-WM3" secondAttribute="top" constant="10" id="fmU-wY-8jV"/>
+                    <constraint firstItem="vwM-lv-gYq" firstAttribute="top" secondItem="0JK-Ww-WM3" secondAttribute="top" id="ySY-F6-1ar"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="236" height="216"/>
+            <connections>
+                <outlet property="favButton" destination="R2H-3H-mf4" id="jHe-yU-XBC"/>
+                <outlet property="imageView" destination="vwM-lv-gYq" id="CNz-3G-Ege"/>
+            </connections>
+            <point key="canvasLocation" x="272.46376811594206" y="164.73214285714286"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="unfav" width="512" height="512"/>
+    </resources>
+</document>
